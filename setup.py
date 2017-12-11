@@ -149,13 +149,13 @@ ext_modules = [
             'src/ndarray_converter.cpp',
         ] + \
             list(recursive_glob('cscore_src/src')) + \
-            list(recursive_glob('ntcore_src/wpiutil/src')),
+            list(recursive_glob('wpiutil_src/src/main/native/cpp')),
         include_dirs=[
             # Path to pybind11 headers
             get_pybind_include(),
             get_pybind_include(user=True),
-            'cscore_src/include',
-            'ntcore_src/wpiutil/include',
+            'cscore_src/src/main/native/include',
+            'wpiutil_src/src/main/native/include',
             get_numpy_include(),
         ],
         libraries=[
